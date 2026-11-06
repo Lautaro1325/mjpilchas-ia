@@ -1,6 +1,6 @@
 # MJPilchas IA – Asistente de ventas con Groq
 
-Parcial 2 – Proyecto de Inteligencia Artificial · UTU 2026
+Parcial 2222 – Proyecto de Inteligencia Artificial · UTU 2026
 
 ## Problema
 

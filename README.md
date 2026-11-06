@@ -47,10 +47,10 @@ Cliente (frontend)  ←────────────── { success, res
 cd backend
 npm install
 # crear el archivo .env a partir de .env.example y pegar tu GROQ_API_KEY
-npm run dev
+npm start
 ```
 
-Después abrí `frontend/index.html` con **Live Server** en VS Code.
+Después abrí **http://localhost:1717**: el mismo servidor muestra la página de presentación con el chat incluido.
 
 ## Estructura
 

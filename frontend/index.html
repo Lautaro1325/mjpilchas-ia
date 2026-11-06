@@ -3,53 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MJPilchas | Asistente de ventas IA</title>
+    <title>MJPilchas | Ropa original de USA</title>
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/store.css">
 </head>
 
-<body>
-    <div class="app">
+<body class="store">
 
-        <aside class="sidebar">
-            <div class="brand">
-                <img src="assets/logo.svg" alt="" width="40" height="40">
-                <div>
-                    <h2>MJPilchas</h2>
-                    <span>Ropa original de USA 🇺🇸</span>
+    <!-- Barra superior -->
+    <div class="topbar">Envíos a todo Uruguay por DAC · Entregas en Montevideo en puntos de encuentro</div>
+
+    <nav class="nav">
+        <a class="nav-brand" href="#inicio">
+            <img src="assets/logo.svg" alt="" width="34" height="34">
+            MJPilchas
+        </a>
+        <div class="nav-links">
+            <a href="#drop">Drop actual</a>
+            <a href="#comprar">Cómo comprar</a>
+            <a href="#envios">Envíos y pagos</a>
+            <a href="#preguntas">Preguntas</a>
+        </div>
+        <button class="nav-chat" type="button" data-open-chat>Hablar con el asistente</button>
+    </nav>
+
+    <!-- Portada -->
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">Nuevo drop disponible</p>
+            <h1>Ropa 100% original<br>traída de <span>Estados Unidos</span></h1>
+            <p class="hero-text">
+                Lacoste, Tommy Hilfiger, Michael Kors, Armani Exchange, Hugo Boss, Guess, Jordan y EA7.
+                Lo que no está en stock, te lo traemos por encargo.
+            </p>
+            <div class="hero-actions">
+                <a class="btn btn-gold" href="#drop">Ver el drop</a>
+                <button class="btn btn-outline" type="button" data-ask="Quiero encargar una prenda, ¿cómo hago?">Hacer un encargo</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Marcas -->
+    <div class="brands" aria-label="Marcas">
+        <span>LACOSTE</span><span>TOMMY HILFIGER</span><span>MICHAEL KORS</span><span>ARMANI EXCHANGE</span>
+        <span>HUGO BOSS</span><span>GUESS</span><span>JORDAN</span><span>EA7</span>
+    </div>
+
+    <!-- Drop actual -->
+    <section id="drop" class="section">
+        <div class="section-head">
+            <p class="eyebrow">En stock en Uruguay</p>
+            <h2>Drop actual</h2>
+        </div>
+
+        <div class="products">
+            <article class="product">
+                <div class="product-img img-navy">
+                    <span class="product-tag">Stock</span>
+                    <span class="product-brand">LACOSTE</span>
                 </div>
+                <div class="product-body">
+                    <p class="product-meta">Lacoste · Azul marino</p>
+                    <h3>Polo clásico piqué</h3>
+                    <p class="price">$2.900</p>
+                    <div class="sizes" role="group" aria-label="Talle">
+                        <button type="button">S</button><button type="button">M</button><button type="button">L</button>
+                    </div>
+                    <button class="btn btn-dark btn-block" type="button" data-product="el polo clásico piqué Lacoste azul marino">Lo quiero</button>
+                </div>
+            </article>
+
+            <article class="product">
+                <div class="product-img img-white">
+                    <span class="product-tag">Stock</span>
+                    <span class="product-brand">TOMMY HILFIGER</span>
+                </div>
+                <div class="product-body">
+                    <p class="product-meta">Tommy Hilfiger · Blanca</p>
+                    <h3>Remera logo bordado</h3>
+                    <p class="price">$1.600</p>
+                    <div class="sizes" role="group" aria-label="Talle">
+                        <button type="button">M</button><button type="button">L</button><button type="button">XL</button>
+                    </div>
+                    <button class="btn btn-dark btn-block" type="button" data-product="la remera Tommy Hilfiger logo bordado blanca">Lo quiero</button>
+                </div>
+            </article>
+
+            <article class="product">
+                <div class="product-img img-black">
+                    <span class="product-tag">Stock</span>
+                    <span class="product-brand">EA7</span>
+                </div>
+                <div class="product-body">
+                    <p class="product-meta">EA7 · Negro</p>
+                    <h3>Conjunto deportivo</h3>
+                    <p class="price price-dm">Precio por privado</p>
+                    <div class="sizes" role="group" aria-label="Talle">
+                        <button type="button">M</button><button type="button">L</button>
+                    </div>
+                    <button class="btn btn-dark btn-block" type="button" data-product="el conjunto deportivo EA7 negro">Consultar precio</button>
+                </div>
+            </article>
+
+            <article class="product product-order">
+                <div class="product-body">
+                    <p class="eyebrow">¿No encontrás lo que buscás?</p>
+                    <h3>Te lo traemos de EE.UU.</h3>
+                    <p class="muted">Seña del 50% y llega en aproximadamente 14 días.</p>
+                    <button class="btn btn-gold btn-block" type="button" data-ask="Quiero encargar una prenda que no está en stock, ¿cómo hago?">Pedir por encargo</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Cómo comprar -->
+    <section id="comprar" class="section section-alt">
+        <div class="section-head">
+            <p class="eyebrow">Fácil y seguro</p>
+            <h2>Cómo comprar</h2>
+        </div>
+        <div class="steps">
+            <div class="step">
+                <span>1</span>
+                <h3>Elegí tu prenda</h3>
+                <p>Del drop en stock o pedila por encargo.</p>
             </div>
-
-            <button id="new-chat" class="new-chat">
-                + Nuevo chat
-            </button>
-
-            <div class="info">
-                <p class="sidebar-label">Cómo comprar</p>
-                <ul>
-                    <li><strong>Stock:</strong> Drops publicados en Instagram</li>
-                    <li><strong>Encargo:</strong> Seña del 50% · ~14 días</li>
-                </ul>
-
-                <p class="sidebar-label">Envíos</p>
-                <ul>
-                    <li>Montevideo: puntos de encuentro</li>
-                    <li>Interior: agencia DAC</li>
-                </ul>
-
-                <p class="sidebar-label">Pagos</p>
-                <ul>
-                    <li>Transferencia o efectivo</li>
-                </ul>
+            <div class="step">
+                <span>2</span>
+                <h3>Escribile al asistente</h3>
+                <p>Te responde al toque y arma el resumen de tu pedido.</p>
             </div>
-
-            <div class="sidebar-footer">
-                <a href="https://www.instagram.com/mjpilchaas/" target="_blank" rel="noopener">@mjpilchaas</a>
-                <span>Vendedores: 09:00 a 21:00</span>
+            <div class="step">
+                <span>3</span>
+                <h3>Confirmá con un vendedor</h3>
+                <p>Te escribe por WhatsApp o Instagram para coordinar el pago.</p>
             </div>
-        </aside>
+            <div class="step">
+                <span>4</span>
+                <h3>Recibí tu pedido</h3>
+                <p>En un punto de encuentro o por DAC en el interior.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Envíos y pagos -->
+    <section id="envios" class="section">
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Montevideo</h3>
+                <p>Entrega en persona en shoppings y zonas céntricas. Coordinás lugar y horario con el vendedor.</p>
+            </div>
+            <div class="info-card">
+                <h3>Interior</h3>
+                <p>Envío por agencia DAC a todo el país, aprox. $230 a $300. Se puede mandar "paga destinatario".</p>
+            </div>
+            <div class="info-card">
+                <h3>Pagos</h3>
+                <p>Transferencia bancaria o efectivo. En encargos, seña del 50% y el resto en la entrega.</p>
+            </div>
+            <div class="info-card">
+                <h3>100% original</h3>
+                <p>Todo lo traemos de Estados Unidos. Talles US. No se aceptan devoluciones.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas frecuentes -->
+    <section id="preguntas" class="section section-alt">
+        <div class="section-head">
+            <p class="eyebrow">Preguntale al asistente</p>
+            <h2>Preguntas frecuentes</h2>
+            <p class="muted">Tocá una pregunta y te responde el asistente con IA.</p>
+        </div>
+        <div class="faq">
+            <button type="button" data-ask="¿Es todo original?">¿Es todo original?</button>
+            <button type="button" data-ask="¿Cómo funciona el encargo?">¿Cómo funciona el encargo?</button>
+            <button type="button" data-ask="¿Cuánto sale el envío al interior?">¿Cuánto sale el envío al interior?</button>
+            <button type="button" data-ask="¿Puedo pagar con tarjeta?">¿Puedo pagar con tarjeta?</button>
+            <button type="button" data-ask="¿Cómo sé qué talle me queda?">¿Cómo sé qué talle me queda?</button>
+            <button type="button" data-ask="¿Aceptan cambios o devoluciones?">¿Aceptan cambios o devoluciones?</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="nav-brand">
+            <img src="assets/logo.svg" alt="" width="28" height="28">
+            MJPilchas
+        </div>
+        <span>Vendedores de 09:00 a 21:00 · Asistente 24 horas</span>
+        <a href="https://www.instagram.com/mjpilchaas/" target="_blank" rel="noopener">@mjpilchaas</a>
+    </footer>
+
+    <!-- Botón flotante del chat -->
+    <button id="chat-toggle" class="chat-toggle" type="button" aria-label="Abrir chat">
+        <span class="chat-toggle-icon">💬</span>
+        <span class="chat-toggle-text">¿Te ayudo?</span>
+    </button>
+
+    <!-- Ventana del chat -->
+    <div id="chat-widget" class="chat-widget" hidden>
         <main class="chat">
 
             <header class="chat-header">
@@ -60,7 +214,9 @@
                     <span class="status"><span class="dot"></span> En línea · responde al instante</span>
                 </div>
 
-                <button id="new-chat-mobile" class="new-chat-mobile" type="button" aria-label="Nuevo chat">+ Nuevo</button>
+                <button id="new-chat" class="widget-btn" type="button" title="Nuevo chat">↺</button>
+                <button id="new-chat-mobile" class="new-chat-mobile" type="button" hidden>+ Nuevo</button>
+                <button id="chat-close" class="widget-btn" type="button" aria-label="Cerrar chat">✕</button>
             </header>
 
             <section
@@ -103,20 +259,19 @@
             <h2>¡Buenas! ¿Qué estás buscando?</h2>
 
             <p>
-                Soy el asistente de MJPilchas. Te ayudo con precios,
-                talles, encargos, envíos y formas de pago.
+                Te ayudo con precios, talles, encargos, envíos y formas de pago.
             </p>
 
             <div class="suggestions">
                 <button type="button" class="suggestion">¿Qué tienen en stock?</button>
                 <button type="button" class="suggestion">¿Cómo funciona el encargo?</button>
                 <button type="button" class="suggestion">¿Hacen envíos al interior?</button>
-                <button type="button" class="suggestion">¿Es todo original?</button>
             </div>
         </div>
     </template>
 
     <script src="js/config.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/store.js"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 require("dotenv").config();
 //importamos Express
 const express = require("express");
+const path = require("path");
 const cors = require("cors");
 
 //importamos las rutas del chat
@@ -10,7 +11,7 @@ const { MODEL } = require("./services/groq.service");
 //creamos nuestra aplicación
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 1717;
 
 // Permitir peticiones desde el frontend - Configuración de CORS
 app.use(cors());
@@ -21,8 +22,11 @@ app.use(express.json());
 // Rutas
 app.use("/api/chat", chatRoutes);
 
-// Ruta inicial (sirve para comprobar que el backend está funcionando)
-app.get("/", (req, res) => {
+// La misma app sirve la página (frontend), así todo corre en un solo servidor
+app.use(express.static(path.join(__dirname, "../../frontend")));
+
+// Ruta de prueba (sirve para comprobar que el backend está funcionando)
+app.get("/api/health", (req, res) => {
     res.json({
         message: "Backend MJPilchas IA funcionando",
         modelo: MODEL

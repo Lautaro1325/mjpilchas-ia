@@ -1,4 +1,6 @@
 // Dirección del backend.
-// En tu PC: http://localhost:3000/api/chat
-// Cuando lo publiquemos en Vercel, se cambia por la URL del backend.
-const API_URL = "http://localhost:3000/api/chat";
+// Si la página la sirve el propio backend (http://localhost:1717), usamos la ruta relativa.
+// Si se abre con Live Server o como archivo, apuntamos al backend en localhost:1717.
+const API_URL = location.port === "1717"
+    ? "/api/chat"
+    : "http://localhost:1717/api/chat";
